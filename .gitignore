@@ -1,0 +1,44 @@
+# OS and editors
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Laravel (backend)
+/backend/vendor/
+/backend/node_modules/
+/backend/public/build/
+/backend/public/hot
+/backend/public/storage
+/backend/storage/*.key
+/backend/storage/pail
+/backend/bootstrap/cache/*.php
+/backend/.phpunit.result.cache
+/backend/.phpunit.cache/
+
+# Astro and Node (frontend)
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.astro/
+/frontend/.cache/
+
+# Logs and caches
+*.log
+npm-debug.log*
+
+# Docker local data
+/docker-data/
+
+# Build and release output on servers
+/releases/
+/current
