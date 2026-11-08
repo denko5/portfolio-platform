@@ -1,6 +1,6 @@
 # Project Brief
 
-Status: **Draft for approval** (Stage 2). Last updated: November 2026.
+Status: **Stage 2 approved with the decisions below.** Last updated: November 2026.
 
 ## 1. Vision
 
@@ -65,16 +65,31 @@ These were used because the owner had not yet answered. Each can be changed.
 | # | Assumption | Status |
 |---|---|---|
 | A1 | The headline is "Software Developer \| Data Analyst". "Tech Content Creator" lives in the Data with Denis section, not the headline. | Assumed |
-| A2 | Overcend text is not yet written. The section stays hidden (`overcend_visible = false`). | Assumed |
-| A3 | `datasets/` CSV files and `.pbix` files are **not** migrated into the platform media library. They stay in the legacy repo or move to dedicated GitHub repos after a licence and privacy review. | Assumed |
-| A4 | The six case-study candidates above are the initial list. | Assumed |
-| A5 | The Social Media dashboard screenshot contains a different phone number and email. It is imported as a draft and blocked from publishing until the owner confirms. | Assumed |
+| A2 | Overcend stays hidden (`overcend_visible = false`) until the owner chooses to show it. | Decided |
+| A3 | `datasets/` CSV files and `.pbix` files are **not** migrated. They stay in the legacy repo until reviewed. | Decided |
+| A4 | Six candidates stay in the plan. Priority: Legal Operations Platform, E-Commerce, Hotel BI. | Decided |
+| A5 | The Social Media dashboard screenshot stays a draft until corrected. | Decided |
 | A6 | Contact details (email, phone, WhatsApp) live only in settings, never hardcoded. | Decided |
 | A7 | PHP 8.4 is used provisionally. Compatibility of Laravel 13, Filament 5, Livewire 4 and all packages is verified in Stage 4 before any production use. | To verify |
 | A8 | The owner develops on Windows with VS Code and PowerShell (seen in screenshots). | Verified from screenshots |
 | A9 | No domain, VPS, email provider or paid service is purchased yet. | Decided (cost) |
 
-## 8. Open questions for the owner
+## 8. Owner decisions (recorded)
+
+1. **Overcend**: hidden from the main navigation and homepage in Release 1. The introduction is an editable setting. Draft text: "Overcend is an emerging technology venture focused on exploring and building practical digital solutions through software development, data and technology." It must never imply clients, employees, established products or operations. It may later appear as a small block near the bottom of About or Home.
+2. **Case studies**: all six candidates stay in the plan but are not all featured. Priority: Legal Operations and Case Management Platform, E-Commerce Sales Dashboard, Hotel BI Dashboard. Healthcare Patient Analytics is kept but de-emphasised and must not expose patient information or unsupported claims. Use the neutral name **Legal Operations and Case Management Platform**, with no implied County ownership, endorsement or production deployment without authorisation. Missing case-study facts are requested from the owner, never invented.
+3. **HumanResources-Kenyan.csv**: source unconfirmed. Not migrated and not public until reviewed. Flagged for manual verification.
+4. **Social Media dashboard screenshot**: not published with outdated contact details. Preferred fix is an updated dashboard and a new screenshot; otherwise blur or crop. The original stays a draft until the corrected version is approved.
+5. **Contact email**: `deniskombe5@gmail.com` for Release 1 while it is actively monitored. Public contact email, enquiry notification email, phone, WhatsApp and social links are all editable in Filament settings.
+6. **Data protection**: a Privacy Policy page is in Release 1 and documents data collected, purpose, retention, security, third-party processors and data subject rights. The owner verifies ODPC registration and other obligations before collecting real enquiries in production. No exemption is assumed.
+
+Other approvals: single administrator, Markdown articles, PHP 8.4 provisionally, on-server publishing (ADR-0002 and ADR-0003 stay Proposed until their spikes pass), local production-like setup with no paid services for now, early staging when funded, teal and navy identity, all 20 projects imported as drafts, and the live portfolio stays untouched until parity.
+
+## 8b. Remaining open questions
+
+1. Final wording of the hero introduction.
+2. Which case studies the owner can write role, approach and outcomes for.
+3. Whether the owner will update the Social Media dashboard or blur the old details.
 
 1. Overcend: what should the introduction say, and where should it appear?
 2. Are the six case-study candidates right? Which can you write role, approach and outcomes for?

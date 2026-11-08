@@ -14,7 +14,7 @@ Status: **Draft for approval.** Stages follow the agreed workflow. Each stage en
 |---|---|---|---|
 | 1 Discovery | Verified inventory of the legacy site | done | Report approved |
 | 2 Documentation | This doc set and ADRs | S | Owner approves docs and answers open questions |
-| 3 Design | Wireframes, design system derived from the current site, ERD final | M | Owner approves home, projects, project detail, about, contact, insights (desktop and mobile) |
+| 3 Design | Wireframes, design system derived from the current site, ERD final | M (layouts approved, fonts chosen) | Owner approves home, projects, project detail, about, contact, insights (desktop and mobile) |
 | 4 Backend foundation | Laravel 13, MySQL, migrations, seeders, Filament, 2FA, legacy import (drafts), CI | L | Tests pass; all 20 projects imported as drafts; admin can edit every release-1 content type |
 | 5 API | Endpoints, validation, resources, rate limits, docs, tests | M | Contract tests pass; unpublished data never leaks |
 | 6 Frontend | Astro pages, components, client-side filters, contact form | L | Pages built from API; accessible; responsive 320 to 1440 |

@@ -17,6 +17,9 @@ Read `docs/PROJECT_BRIEF.md` and `docs/ARCHITECTURE.md` before changing anything
 8. Do not make destructive production changes without a backup and recovery plan.
 9. Overcend is an **emerging brand concept**. Never describe it as a registered or established company.
 10. Unpublished content must never be reachable from the public API or the public site.
+11. Use the neutral name "Legal Operations and Case Management Platform". Do not imply County ownership, endorsement or production deployment.
+12. Do not import or publish `HumanResources-Kenyan.csv`, any `.pbix` file or patient information. Block the Social Media dashboard screenshot until corrected.
+13. Fonts: Fraunces (headings) and Inter (body), self-hosted. See `docs/DESIGN.md`.
 
 ## Conventions
 - PHP: Laravel Pint formatting; Pest tests; Form Requests for validation; API Resources for output.
