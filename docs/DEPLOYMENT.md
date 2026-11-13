@@ -6,14 +6,14 @@ Status: **Server deployment PAUSED (cost).** Local development and a free local 
 
 | Environment | Status | Notes |
 |---|---|---|
-| Local | Stage 4 | Laravel and Astro on the developer machine, MySQL and Mailpit in Docker |
-| Local production-like | Stage 4 | Nginx + PHP-FPM + MySQL in Docker Compose, same routing as production, to rehearse the real setup for free |
+| Local | Stage 4 | Laravel and Astro on the developer machine, SQLite locally, MySQL 8 in CI (ADR-0010) |
+| Local production-like | **Deferred** | Nginx + PHP-FPM + MySQL in Docker Compose, same routing as production. Added when Docker is enabled. |
 | Staging | **Paused** | Real server, real HTTPS, test data |
 | Production | **Paused** | Public site |
 
 The legacy site on GitHub Pages stays live throughout. No DNS change happens until the parity checklist and a staging run pass.
 
-## 2. Local production-like setup (free)
+## 2. Local production-like setup (deferred, free when enabled)
 
 Goal: learn and test the deployment mechanics without a server.
 

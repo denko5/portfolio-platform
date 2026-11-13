@@ -13,3 +13,4 @@ Each ADR records one decision: context, decision, consequences. Status is `Accep
 | [0007](0007-transactional-email.md) | Transactional email provider | Proposed (pending verification) |
 | [0008](0008-client-side-filtering-and-deferred-features.md) | Client-side filtering, deferred search and redirects | Accepted |
 | [0009](0009-version-and-dependency-policy.md) | Version and dependency policy | Accepted |
+| [0010](0010-local-database-strategy.md) | Local database strategy without Docker | Accepted (interim) |

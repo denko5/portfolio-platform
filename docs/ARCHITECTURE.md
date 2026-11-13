@@ -39,7 +39,7 @@ portfolio-platform/
 ├── .github/    CI workflows
 ├── README.md
 ├── CLAUDE.md
-└── docker-compose.yml   (added in Stage 4: MySQL, Mailpit, optional Nginx and PHP-FPM)
+└── docker-compose.yml   (deferred: MySQL, Mailpit, optional Nginx and PHP-FPM)
 ```
 
 ## 4. Technology stack and verification status
@@ -114,8 +114,8 @@ Originals are managed by Laravel (Spatie Media Library) and exposed with metadat
 
 | Environment | Purpose | Status |
 |---|---|---|
-| Local | Development and tests (Docker for MySQL and Mailpit) | Planned Stage 4 |
-| Local production-like | Nginx + PHP-FPM + MySQL in Docker to rehearse deployment for free | Planned Stage 4 |
+| Local | Development and tests on SQLite, MySQL 8 verified in CI (ADR-0010) | Planned Stage 4 |
+| Local production-like | Nginx + PHP-FPM + MySQL in Docker to rehearse deployment for free | **Deferred** (Docker not used for now) |
 | Staging | Real server, real HTTPS, test data | **Paused (cost)** |
 | Production | Public site | **Paused (cost)** |
 

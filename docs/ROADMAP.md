@@ -33,7 +33,7 @@ Owner work that can run in parallel: review the 20 imported projects, write case
 
 ## Stage 4 task outline
 
-1. Verify local tools (PHP, Composer, Node, Docker, MySQL).
+1. Verify local tools (PHP 8.4, Composer, Node). Docker and local MySQL are deferred (ADR-0010).
 2. Create Laravel 13 app in `backend/`, verify Laravel 13, Filament 5, Livewire 4, PHP 8.4 compatibility, record versions.
 3. Migrations from DATABASE.md, models, factories.
 4. Spatie media decision confirmed or replaced (ADR-0003 spike).
@@ -85,6 +85,7 @@ Owner work that can run in parallel: review the 20 imported projects, write case
 | Risk | Mitigation |
 |---|---|
 | Owner content (case studies, Overcend) not ready | Optional fields, hidden sections, launch without them |
+| SQLite and MySQL behave differently | MySQL 8 runs in CI on every push; real local MySQL before Stage 5 exits (ADR-0010) |
 | Dependency incompatibility (PHP 8.4, Filament 5, Livewire 4, Spatie) | Verify in Stage 4 before building on them; documented fallbacks in ADRs |
 | Astro build memory on a small VPS | Measure locally, use build timeouts and low priority, size the VPS accordingly |
 | Scope creep into a company platform | Overcend stays out of release 1 |
