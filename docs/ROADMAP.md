@@ -31,6 +31,16 @@ Stage 2 approval, Stage 3 design approval, Stage 4 backend, Stage 5 API, Stage 6
 
 Owner work that can run in parallel: review the 20 imported projects, write case studies, confirm facts, supply Overcend text, decide email and domain.
 
+## Stage 4 progress
+
+- [x] Local tools verified (PHP 8.4.27, Composer, Node)
+- [x] Laravel 13.42.0 skeleton, Filament 5.11.3 admin, Spatie media, Pest, Scramble installed (dependency resolution verified, ADR-0009)
+- [x] Admin login works locally
+- [ ] Migrations, enums and models from DATABASE.md (written, awaiting local run)
+- [ ] Filament resources, 2FA and panel access restriction
+- [ ] Legacy import command (drafts)
+- [ ] CI with MySQL 8 (ADR-0010)
+
 ## Stage 4 task outline
 
 1. Verify local tools (PHP 8.4, Composer, Node). Docker and local MySQL are deferred (ADR-0010).

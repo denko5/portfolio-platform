@@ -2,6 +2,8 @@
 
 Status: **Draft for approval** (Stage 2). MySQL 8, InnoDB, `utf8mb4`.
 
+Implementation note: columns described as enums (status, type, enquiry fields) are stored as short `varchar` columns and mapped to PHP backed enums in the models. This keeps migrations portable between SQLite and MySQL (ADR-0010) and avoids schema changes when a value is added.
+
 Conventions: `id` is an unsigned big integer primary key. Timestamps are `created_at` and `updated_at`. Content tables use `publication_status` (`draft` or `published`) and, where relevant, `published_at`. Slugs are unique. Foreign keys are always declared with an explicit delete rule.
 
 ## 1. ERD (release 1)
