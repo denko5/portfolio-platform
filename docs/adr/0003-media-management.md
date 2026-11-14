@@ -25,6 +25,10 @@ Use Spatie Media Library **only to store originals and metadata**, with admin th
 
 Result: Laravel owns originals, Astro owns public variants. No duplicated processing.
 
+## Spike status
+- Spike 1, dependency resolution: **passed** (14 November 2026). Spatie Media Library 11.23.13 and the Filament Spatie plugin 5.11.3 resolve together with Filament 5.11.3 on Laravel 13.42.0 and PHP 8.4.27.
+- Spike 2, runtime: **pending**. Must prove upload, `alt` and `is_placeholder` custom properties, API exposure of originals, and Astro build access. The ADR stays Proposed until this passes.
+
 ## Fallback
 If Spatie is not compatible, use a small own table (`media_assets`: path, alt, is_placeholder, width, height, sort order) with Filament's file upload. This avoids the polymorphic relation and is acceptable for the small number of image-bearing models.
 
