@@ -18,9 +18,10 @@ Status: **Draft for approval** (Stage 2). Reference framework: OWASP ASVS. Secur
 | Control | Plan | Stage |
 |---|---|---|
 | Password hashing (Laravel default bcrypt or argon) | Planned | 4 |
-| Admin two-factor authentication | Planned (use Filament MFA if it fits, verify) | 4 |
+| Admin two-factor authentication | Written: Filament 5 app authentication (TOTP) with recovery codes, required by default; browser verification pending | 4 |
 | Login throttling | Planned | 4 |
 | Secure session and cookies (`Secure`, `HttpOnly`, `SameSite`) | Planned | 4 |
+| Admin panel access allow-list (`ADMIN_EMAILS`, default deny) | Written, covered by Pest tests | 4 |
 | Server-side authorization on every admin action | Planned | 4 |
 | CSRF protection for admin | Framework default | 4 |
 | Strict request validation (Form Requests) | Planned | 5 |
