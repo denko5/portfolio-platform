@@ -72,7 +72,7 @@ The OpenAPI document is generated from the code with a tool to be verified in St
 
 ### Project detail adds
 
-`problem`, `objectives`, `role`, `approach`, `challenges`, `outcomes`, `lessons`, `description_markdown`, `public_note`, `link_note`, `features[]`, `links[] {label, url, type}`, `gallery[]` (same shape as `cover`), `downloads[] {label, url, mime, size}`, `seo {title, description}`. Fields that are empty are returned as `null` or `[]`, and the frontend hides the matching section.
+`problem`, `objectives`, `role`, `approach`, `challenges`, `outcomes`, `lessons`, `description_markdown`, `public_note`, `link_note`, `features[]`, `links[] {label, url, type}`, `images[]` (all images in order, same shape as `cover`; `cover` is simply the first one), `downloads[] {label, url, mime, size}`, `seo {title, description}`. Fields that are empty are returned as `null` or `[]`, and the frontend hides the matching section.
 
 ## 3. Contact submission
 

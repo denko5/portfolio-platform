@@ -22,7 +22,9 @@ erDiagram
   skill_categories ||--o{ skills : groups
   article_categories ||--o{ articles : groups
   articles }o--o{ tags : tagged
-  projects ||--o{ media : "attached images and files"
+  projects ||--o{ project_images : has
+  project_images ||--o{ media : "image file"
+  projects ||--o{ media : "downloads"
   articles ||--o{ media : "attached images"
   site_settings ||--o{ media : "portrait, CV, covers"
 ```
@@ -101,13 +103,26 @@ Media collections: `portrait`, `cv` (single), `default-og-image`, `content-showc
 | deleted_at | timestamp null | soft delete |
 
 Indexes: `(publication_status, sort_order)`, `(category_id)`, `(is_featured)`.
-Media collections: `cover` (single), `gallery`, `downloads` (public files such as a report PDF). Media custom properties: `alt` (required for publish), `is_placeholder` (boolean), `caption`.
+Media collection on projects: `downloads` (public files such as a report PDF). Images live in `project_images` (below). `publish_block_reason` varchar(300) null is an internal publishing hold: while it has text the project cannot be published.
 
 ### project_features
 `project_id` FK **cascade**, `body` varchar(300), `sort_order` int. Index `(project_id, sort_order)`.
 
 ### project_links
 `project_id` FK **cascade**, `label` varchar(80), `url` varchar(500), `type` enum(github, live, notebook, drive, report, other), `is_visible` boolean, `sort_order` int. External URLs only. Hosted files use the `downloads` media collection.
+
+### project_images
+Every image is a row with real columns, because Filament's core upload has no per-file metadata (ADR-0003). The Spatie media table stores only the file.
+
+| Column | Type | Notes |
+|---|---|---|
+| project_id | FK projects | **cascade** |
+| alt | varchar(300) | **required** |
+| is_placeholder | boolean | true for illustrations that are not real screenshots |
+| caption | varchar(200) null | |
+| sort_order | int | the first image is the cover |
+
+Media collection on `project_images`: `image` (single file). Index `(project_id, sort_order)`.
 
 ### project_technology (pivot)
 `project_id` and `technology_id`, composite primary key, both **cascade**, `sort_order` int.
@@ -187,8 +202,8 @@ Source: `portfolioweb` at commit `d480f8d`. The import is a one-time artisan com
 | `stack[]` | `technologies` and `project_technology` (34 values, each classified by type) |
 | `links[]` | `project_links` (external URLs) |
 | `assets/docs/*` files linked as downloads | `downloads` media collection |
-| `image` | `cover` media, `alt`, `is_placeholder` |
-| `gallery[]` | `gallery` media |
+| `image` | first `project_images` row (`alt`, `is_placeholder`) plus its media file |
+| `gallery[]` | further `project_images` rows in order |
 | every imported project | `publication_status = draft` |
 | `SITE.*` | `site_settings` |
 | `SITE.social.*` | `social_links` |

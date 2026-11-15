@@ -37,7 +37,7 @@ function makeProject(array $overrides = []): Project
 it('creates every release 1 table', function () {
     $tables = [
         'site_settings', 'social_links', 'project_categories', 'technologies', 'projects',
-        'project_features', 'project_links', 'project_technology', 'experiences',
+        'project_features', 'project_links', 'project_images', 'project_technology', 'experiences',
         'experience_highlights', 'experience_technology', 'education', 'certifications',
         'skill_categories', 'skills', 'services', 'service_items', 'service_technology',
         'article_categories', 'tags', 'articles', 'article_tag', 'contact_messages', 'site_builds',

@@ -14,10 +14,10 @@ Projects, articles and settings need images and files with metadata (alt text, p
 | Metadata (alt, `is_placeholder`) fits custom properties | Polymorphic by design (the one justified exception to our rule against polymorphism) |
 
 ## Decision
-Use Spatie Media Library **only to store originals and metadata**, with admin thumbnail conversions for Filament lists. Public responsive variants are created by **Astro at build time**.
+Use Spatie Media Library **only to store the original files**. Per-image metadata (`alt`, `is_placeholder`, `caption`, order) lives in a `project_images` table as real columns, because Filament's core file upload has no per-file metadata and the official Spatie plugin only sets custom properties at upload time (checked in the plugin documentation, November 2026). A third-party metadata plugin was considered and rejected to avoid an extra dependency. Public responsive variants are created by **Astro at build time**.
 
 ## How Astro accesses media
-1. The API returns each image with `original_url`, `width`, `height`, `mime`, `alt`, `is_placeholder`.
+1. The API returns each image with `original_url`, `width`, `height`, `mime`, `alt`, `is_placeholder` (alt and placeholder come from `project_images`).
 2. The build downloads each original once into a local cache keyed by URL plus a content hash (over loopback).
 3. Astro's image pipeline creates AVIF and WebP variants and `srcset` from the cached originals, with explicit width and height.
 4. SVG placeholders pass through unchanged (no raster conversion).
