@@ -107,16 +107,7 @@ class ImportLegacyProjects extends Command
         }
 
         foreach ($row['technologies'] as $index => $name) {
-            // Reuse a technology that already exists with the same slug or the same name (any letter case).
-            $technology = Technology::query()
-                ->where('slug', Str::slug($name))
-                ->orWhereRaw('lower(name) = ?', [Str::lower($name)])
-                ->first()
-                ?? Technology::create([
-                    'slug' => Str::slug($name),
-                    'name' => $name,
-                    'type' => TechnologyType::from($types[$name] ?? 'tool')->value,
-                ]);
+            $technology = Technology::resolve($name, TechnologyType::from($types[$name] ?? 'tool')->value);
             $project->technologies()->attach($technology->id, ['sort_order' => $index + 1]);
         }
 

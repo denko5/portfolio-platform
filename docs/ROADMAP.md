@@ -39,8 +39,8 @@ Owner work that can run in parallel: review the 20 imported projects, write case
 - [x] Migrations, enums and models from DATABASE.md (tests passing)
 - [x] Admin access allow-list and 2FA (verified in browser)
 - [x] Projects resource with images, publishing hold (uploads verified in browser)
-- [ ] Legacy import of projects as drafts (written, awaiting local run)
-- [ ] Import of services, skills, experience, education, certifications and settings
+- [x] Legacy import of the 20 projects as drafts (verified locally, 31 tests passing)
+- [ ] Legacy import of services, skills, experience, education, certifications, social links and settings (written, awaiting local run)
 - [ ] Other Filament resources (services, skills, experience, settings, enquiries)
 - [ ] CI with MySQL 8 (ADR-0010)
 
