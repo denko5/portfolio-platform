@@ -1,0 +1,916 @@
+{
+  "categories": [
+    {
+      "slug": "software",
+      "name": "Software"
+    },
+    {
+      "slug": "dashboards",
+      "name": "Dashboards"
+    },
+    {
+      "slug": "python-sql",
+      "name": "Python and SQL"
+    }
+  ],
+  "technologies": [
+    {
+      "name": "Python",
+      "type": "language"
+    },
+    {
+      "name": "SQL",
+      "type": "language"
+    },
+    {
+      "name": "PHP",
+      "type": "language"
+    },
+    {
+      "name": "JavaScript",
+      "type": "language"
+    },
+    {
+      "name": "HTML/CSS",
+      "type": "language"
+    },
+    {
+      "name": "DAX",
+      "type": "language"
+    },
+    {
+      "name": "Laravel",
+      "type": "platform"
+    },
+    {
+      "name": "Livewire",
+      "type": "platform"
+    },
+    {
+      "name": "Docker",
+      "type": "platform"
+    },
+    {
+      "name": "Google Colab",
+      "type": "platform"
+    },
+    {
+      "name": "Kaggle",
+      "type": "platform"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "platform"
+    },
+    {
+      "name": "Power BI",
+      "type": "tool"
+    },
+    {
+      "name": "Tableau",
+      "type": "tool"
+    },
+    {
+      "name": "MySQL",
+      "type": "tool"
+    },
+    {
+      "name": "MySQL Workbench",
+      "type": "tool"
+    },
+    {
+      "name": "Excel",
+      "type": "tool"
+    },
+    {
+      "name": "Pandas",
+      "type": "tool"
+    },
+    {
+      "name": "BeautifulSoup",
+      "type": "tool"
+    },
+    {
+      "name": "Scikit-Learn",
+      "type": "tool"
+    },
+    {
+      "name": "TensorFlow",
+      "type": "tool"
+    },
+    {
+      "name": "Keras",
+      "type": "tool"
+    },
+    {
+      "name": "Power Query",
+      "type": "tool"
+    },
+    {
+      "name": "Data Cleaning",
+      "type": "concept"
+    },
+    {
+      "name": "Data Visualization",
+      "type": "concept"
+    },
+    {
+      "name": "EDA",
+      "type": "concept"
+    },
+    {
+      "name": "HR Analytics",
+      "type": "concept"
+    },
+    {
+      "name": "Marketing Analytics",
+      "type": "concept"
+    },
+    {
+      "name": "Machine Learning",
+      "type": "concept"
+    },
+    {
+      "name": "MLOps",
+      "type": "concept"
+    },
+    {
+      "name": "NLP",
+      "type": "concept"
+    },
+    {
+      "name": "Pipelines",
+      "type": "concept"
+    },
+    {
+      "name": "Regression",
+      "type": "concept"
+    },
+    {
+      "name": "BERT",
+      "type": "concept"
+    }
+  ],
+  "projects": [
+    {
+      "slug": "legal-operations-case-management-platform",
+      "title": "Legal Operations and Case Management Platform",
+      "category": "software",
+      "summary": "A Laravel system for legal operations and case management, built for a county government environment.",
+      "problem": "Legal offices need one system to track cases, contracts, advisory work, registry files and deadlines.",
+      "status_label": "In development",
+      "public_note": "This is a private project. The screenshots show the interface and summary counts only, with no case records.",
+      "link_note": "Private repository",
+      "is_featured": true,
+      "sort_order": 10,
+      "publish_block_reason": "Confirm authorisation before showing County branding (crest and Office of the County Attorney site) in screenshots, and agree the permanent product name.",
+      "features": [
+        "Litigation tracking",
+        "Contract lifecycle management",
+        "Advisory matters",
+        "Registry file control",
+        "Task management with automated deadline alerts",
+        "Role-based access across staff levels",
+        "One-click PDF reports with official letterhead"
+      ],
+      "technologies": [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "JavaScript",
+        "HTML/CSS"
+      ],
+      "links": [],
+      "images": [
+        {
+          "file": "legal-ops-dashboard.webp",
+          "alt": "Screenshot of a legal operations dashboard with summary counts for cases, matters, hearings and tasks, and a navigation sidebar",
+          "is_placeholder": false
+        },
+        {
+          "file": "legal-ops-landing-page.webp",
+          "alt": "Screenshot of a public landing page with options to submit and track an inquiry",
+          "is_placeholder": false
+        }
+      ],
+      "downloads": []
+    },
+    {
+      "slug": "ecommerce-sales-dashboard",
+      "title": "E-Commerce Sales Dashboard",
+      "category": "dashboards",
+      "summary": "A Power BI dashboard for global sales performance with regional drill-down and trend analysis.",
+      "problem": "Sales teams need to see where revenue and profit come from across categories, products and regions.",
+      "status_label": null,
+      "public_note": null,
+      "link_note": "Public link coming soon",
+      "is_featured": true,
+      "sort_order": 20,
+      "publish_block_reason": null,
+      "features": [
+        "KPI cards for sales, profit, discount, orders and units sold",
+        "Sales trend by year and quarter",
+        "Sales and profit by category",
+        "Profit by region and a map of sales by region",
+        "Segment and ship mode filters"
+      ],
+      "technologies": [
+        "Power BI",
+        "Data Visualization"
+      ],
+      "links": [],
+      "images": [
+        {
+          "file": "ecommerce-sales-dashboard.webp",
+          "alt": "Screenshot of the E-Commerce Sales Dashboard in Power BI showing KPI cards, sales trends, category charts and a regional map",
+          "is_placeholder": false
+        }
+      ],
+      "downloads": []
+    },
+    {
+      "slug": "healthcare-patient-analytics",
+      "title": "Healthcare Patient Analytics",
+      "category": "dashboards",
+      "summary": "An end-to-end analysis of synthetic hospital patient records using MySQL, Python, Power BI and Excel, finished with two dashboards and a written report.",
+      "problem": "Hospital administrators need a clear view of admissions, conditions, billing and test results to plan care and capacity.",
+      "status_label": null,
+      "public_note": "The data is a synthetic Kaggle healthcare dataset, so the findings are illustrative. The project is also documented as a TikTok series for beginners.",
+      "link_note": null,
+      "is_featured": false,
+      "sort_order": 40,
+      "publish_block_reason": null,
+      "features": [
+        "MySQL cleaning: removed 2 duplicate rows, standardised text, converted dates and engineered 6 new columns",
+        "Python (pandas) validation with IQR outlier checks and exploratory analysis",
+        "Power BI dashboard with DAX measures, a date table, five slicers and KPI cards",
+        "Matching Excel dashboard built from pivot tables and slicers",
+        "A written report with key findings and recommendations"
+      ],
+      "technologies": [
+        "MySQL",
+        "Python",
+        "Power BI",
+        "Excel"
+      ],
+      "links": [
+        {
+          "label": "GitHub repository",
+          "url": "https://github.com/denko5/healthcare-patient-analytics",
+          "type": "github"
+        }
+      ],
+      "images": [
+        {
+          "file": "healthcare-powerbi-dashboard.webp",
+          "alt": "Screenshot of the Healthcare Patient Analytics dashboard in Power BI with KPI cards, slicers, admissions trend, blood type, test results and age group charts",
+          "is_placeholder": false
+        },
+        {
+          "file": "healthcare-excel-dashboard.webp",
+          "alt": "Screenshot of the matching Healthcare Patient Analytics dashboard built in Excel with slicers, KPI cells and pivot charts",
+          "is_placeholder": false
+        }
+      ],
+      "downloads": []
+    },
+    {
+      "slug": "lung-cancer-dashboard",
+      "title": "Lung Cancer Analysis Dashboard",
+      "category": "dashboards",
+      "summary": "A two-page Power BI dashboard on lung cancer patient data, with a country map, survival breakdowns and filters, built on a dataset cleaned in Google Colab.",
+      "problem": "Understand how lung cancer patients are spread by country, cancer stage, smoking status and treatment, and how survival relates to them.",
+      "status_label": null,
+      "public_note": "The dashboard uses a cleaned subset of 130,819 patient records taken from a source file of 890,000 rows.",
+      "link_note": null,
+      "is_featured": false,
+      "sort_order": 50,
+      "publish_block_reason": "Confirm the dataset source and licence before publishing.",
+      "features": [
+        "KPI cards for total patients, average age and average treatment duration",
+        "Overview page with patients by gender, cancer stage and year",
+        "Survival by smoking status, and by treatment type and family history",
+        "Country Details page with a map of patients by country and a patient table",
+        "Filters for smoking status, asthma, hypertension, gender, survival and BMI range"
+      ],
+      "technologies": [
+        "Power BI",
+        "Python",
+        "Google Colab",
+        "Data Cleaning"
+      ],
+      "links": [
+        {
+          "label": "Colab notebook (cleaned dataset)",
+          "url": "https://colab.research.google.com/drive/1sguFDJgYsuvyvZ59hKCJTt2pjtRBsyKW?usp=sharing",
+          "type": "notebook"
+        }
+      ],
+      "images": [
+        {
+          "file": "lung-cancer-dashboard.webp",
+          "alt": "Screenshot of the Lung Cancer Analysis Dashboard in Power BI showing KPI cards, gender, smoking status, cancer stage, treatment type and yearly charts with filters",
+          "is_placeholder": false
+        },
+        {
+          "file": "lung-cancer-country-details.webp",
+          "alt": "Screenshot of the Country Details page of the lung cancer dashboard with a map of patients by country and a patient table",
+          "is_placeholder": false
+        }
+      ],
+      "downloads": []
+    },
+    {
+      "slug": "social-media-dashboard",
+      "title": "Social Media Campaign Dashboard",
+      "category": "dashboards",
+      "summary": "A Power BI dashboard that tracks Facebook ad campaign spend, reach, clicks and conversions, built for the Future Interns Data Science and Analytics internship.",
+      "problem": "Marketing teams need to see how ad campaigns perform, including engagement, click cost and conversions.",
+      "status_label": null,
+      "public_note": "Completed as Task 2 of the Future Interns Data Science and Analytics internship, using the Facebook Ads dataset.",
+      "link_note": null,
+      "is_featured": false,
+      "sort_order": 60,
+      "publish_block_reason": "Screenshot shows outdated phone and email. Update the dashboard, export a new screenshot, then clear this hold.",
+      "features": [
+        "KPI cards for conversions, spend, impressions, clicks, approved conversions, conversion rate and cost per approved conversion",
+        "Spend and cost per click trends by day and campaign",
+        "Impressions and conversion rate by age group and gender",
+        "Total conversions by campaign",
+        "Gender and age group filters"
+      ],
+      "technologies": [
+        "Power BI",
+        "Data Visualization",
+        "Marketing Analytics"
+      ],
+      "links": [],
+      "images": [],
+      "downloads": []
+    },
+    {
+      "slug": "tableau-hr-dashboard",
+      "title": "Tableau HR Dashboard",
+      "category": "dashboards",
+      "summary": "A workforce dashboard covering headcount, hiring and exits, demographics and income, published on Tableau Public.",
+      "problem": "HR teams need a clear view of workforce size, movement and pay across departments.",
+      "status_label": null,
+      "public_note": null,
+      "link_note": null,
+      "is_featured": false,
+      "sort_order": 70,
+      "publish_block_reason": "Confirm the HR dataset is synthetic or anonymised before publishing.",
+      "features": [
+        "Overview of active, hired and terminated employees",
+        "Headcount by department and a location map",
+        "Demographics by gender, education and age",
+        "Income analysis by education, gender and age"
+      ],
+      "technologies": [
+        "Tableau",
+        "Data Visualization",
+        "HR Analytics"
+      ],
+      "links": [
+        {
+          "label": "View live dashboard",
+          "url": "https://public.tableau.com/views/HRDASHBOARD_17513078026020/HRSUMMARY",
+          "type": "live"
+        }
+      ],
+      "images": [
+        {
+          "file": "hr-dashboard-tableau.webp",
+          "alt": "Screenshot of the Human Resources dashboard in Tableau showing employee counts, departments, demographics and income charts",
+          "is_placeholder": false
+        }
+      ],
+      "downloads": [
+        {
+          "file": "tableau-hr-dashboard-report.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "hotel-bi-dashboard",
+      "title": "Hotel BI Dashboard",
+      "category": "dashboards",
+      "summary": "A hotel management dashboard in Power BI built with DAX measures and Power Query transformations.",
+      "problem": "Hotel managers need consolidated reporting to monitor revenue, room occupancy and booking trends.",
+      "status_label": null,
+      "public_note": null,
+      "link_note": null,
+      "is_featured": true,
+      "sort_order": 30,
+      "publish_block_reason": null,
+      "features": [
+        "Star Schema data model built from transformed hotel datasets",
+        "Revenue, RevPAR, ADR, occupancy and realisation KPIs",
+        "Week-on-week comparison",
+        "Filters by city and room type",
+        "Performance by booking platform",
+        "DAX measures and Power Query transformations"
+      ],
+      "technologies": [
+        "Power BI",
+        "DAX",
+        "Power Query"
+      ],
+      "links": [
+        {
+          "label": "Dashboard files",
+          "url": "https://drive.google.com/drive/folders/1mB9-xq0VVQqda7Kqv43sVFVPAidpcmkm",
+          "type": "drive"
+        }
+      ],
+      "images": [
+        {
+          "file": "hotel-bi-dashboard.webp",
+          "alt": "Screenshot of the Hotel BI dashboard in Power BI showing revenue, RevPAR, occupancy and booking platform charts",
+          "is_placeholder": false
+        }
+      ],
+      "downloads": []
+    },
+    {
+      "slug": "sales-sql-analysis",
+      "title": "Sales Performance Analysis",
+      "category": "python-sql",
+      "summary": "Cleaned and analyzed 1,000+ African product sales records to surface product performance insights.",
+      "problem": "Raw sales records had to be cleaned and queried before product performance could be compared.",
+      "status_label": null,
+      "public_note": null,
+      "link_note": null,
+      "is_featured": false,
+      "sort_order": 80,
+      "publish_block_reason": null,
+      "features": [
+        "Data cleaning in SQL",
+        "Exploratory analysis across products, regions, salespeople and marketing channels",
+        "Identified top-performing products, markets and sales channels"
+      ],
+      "technologies": [
+        "SQL",
+        "MySQL Workbench",
+        "EDA"
+      ],
+      "links": [
+        {
+          "label": "GitHub repository",
+          "url": "https://github.com/denko5/Sales-Analysis",
+          "type": "github"
+        }
+      ],
+      "images": [
+        {
+          "file": "sales-sql-analysis.webp",
+          "alt": "Cover slide titled Data Cleaning and Exploratory Data Analysis by Denis Kombe",
+          "is_placeholder": false
+        }
+      ],
+      "downloads": []
+    },
+    {
+      "slug": "valentines-analysis",
+      "title": "Valentine's Day Sales Analysis",
+      "category": "python-sql",
+      "summary": "An exploratory analysis in SQL of Valentine's Day purchases, covering revenue, customers, products, search behavior and locations.",
+      "problem": "Understand how revenue, customers, products and locations contribute to Valentine's Day sales.",
+      "status_label": null,
+      "public_note": "This project uses a dummy dataset, so the figures are for practice and illustration only.",
+      "link_note": null,
+      "is_featured": false,
+      "sort_order": 90,
+      "publish_block_reason": null,
+      "features": [
+        "Revenue and sales performance",
+        "Customer demographics and buying behavior",
+        "Shopping trends and best-selling products",
+        "Search behavior and conversion rates",
+        "Geographical performance by meetup point",
+        "Customer spending and values"
+      ],
+      "technologies": [
+        "SQL",
+        "MySQL",
+        "EDA"
+      ],
+      "links": [
+        {
+          "label": "GitHub repository",
+          "url": "https://github.com/denko5/Valentine-s-Analysis",
+          "type": "github"
+        }
+      ],
+      "images": [
+        {
+          "file": "valentines-analysis.webp",
+          "alt": "Cover slide titled Valentine's Day Data Analysis, Exploratory Data Analysis",
+          "is_placeholder": false
+        }
+      ],
+      "downloads": []
+    },
+    {
+      "slug": "nexahub",
+      "title": "NexaHub Platform",
+      "category": "software",
+      "summary": "A personal Laravel 11 platform on a Docker Compose setup with Nginx, MySQL 8, Redis 7, Meilisearch and Mailpit.",
+      "problem": null,
+      "status_label": "In development",
+      "public_note": "This is a private personal project and is still in development.",
+      "link_note": "Private repository",
+      "is_featured": false,
+      "sort_order": 100,
+      "publish_block_reason": null,
+      "features": [
+        "Docker Compose architecture with Nginx, MySQL 8, Redis 7, Meilisearch and Mailpit",
+        "CI/CD with GitHub Actions",
+        "PSR-12 code style enforcement and Pest PHP tests",
+        "Livewire 3 for a reactive interface",
+        "API layer designed for future mobile app and M-Pesa payment integration"
+      ],
+      "technologies": [
+        "Laravel",
+        "Docker",
+        "MySQL",
+        "PHP",
+        "Livewire"
+      ],
+      "links": [],
+      "images": [
+        {
+          "file": "nexahub.svg",
+          "alt": "Placeholder diagram of a Docker architecture with Nginx, a Laravel app, MySQL, Redis, Meilisearch and Mailpit",
+          "is_placeholder": true
+        }
+      ],
+      "downloads": []
+    },
+    {
+      "slug": "campus-crib",
+      "title": "Campus Crib",
+      "category": "software",
+      "summary": "An off-campus hostel discovery platform with search filters and real-time chat, built as my final-year project with Newton Kirimi.",
+      "problem": "Students need an easier way to find off-campus hostels.",
+      "status_label": null,
+      "public_note": "Developed as a 4th-year undergraduate final project in collaboration with Newton Kirimi.",
+      "link_note": null,
+      "is_featured": false,
+      "sort_order": 110,
+      "publish_block_reason": null,
+      "features": [
+        "Hostel search with filters",
+        "Real-time chat"
+      ],
+      "technologies": [
+        "PHP",
+        "MySQL",
+        "JavaScript",
+        "HTML/CSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub repository",
+          "url": "https://github.com/denko5/Campus-Crib",
+          "type": "github"
+        }
+      ],
+      "images": [
+        {
+          "file": "campus-crib.svg",
+          "alt": "Placeholder illustration of a hostel listings page with filters and a chat panel",
+          "is_placeholder": true
+        }
+      ],
+      "downloads": []
+    },
+    {
+      "slug": "netflix-data-wrangling",
+      "title": "Netflix Data Wrangling",
+      "category": "python-sql",
+      "summary": "Data cleaning and anomaly detection on the Netflix dataset, documented in a Kaggle notebook.",
+      "problem": "Raw datasets contain gaps and inconsistencies that need fixing before any analysis.",
+      "status_label": null,
+      "public_note": null,
+      "link_note": null,
+      "is_featured": false,
+      "sort_order": 120,
+      "publish_block_reason": null,
+      "features": [
+        "Data cleaning with Pandas",
+        "Anomaly detection",
+        "Public Kaggle notebook"
+      ],
+      "technologies": [
+        "Python",
+        "Pandas",
+        "Kaggle"
+      ],
+      "links": [
+        {
+          "label": "Kaggle notebook",
+          "url": "https://www.kaggle.com/code/deniskombe5gmailcom/data-wrangling-netflix-dataset",
+          "type": "notebook"
+        }
+      ],
+      "images": [
+        {
+          "file": "netflix-data-wrangling.svg",
+          "alt": "Placeholder illustration comparing a table before and after data cleaning",
+          "is_placeholder": true
+        }
+      ],
+      "downloads": []
+    },
+    {
+      "slug": "titanic-eda",
+      "title": "Titanic Survival EDA",
+      "category": "python-sql",
+      "summary": "Exploratory data analysis and predictive survival analysis on the classic Titanic dataset.",
+      "problem": "Understand which passenger factors relate to survival.",
+      "status_label": null,
+      "public_note": null,
+      "link_note": null,
+      "is_featured": false,
+      "sort_order": 130,
+      "publish_block_reason": null,
+      "features": [
+        "Exploratory data analysis",
+        "Predictive survival analysis with scikit-learn"
+      ],
+      "technologies": [
+        "Python",
+        "EDA",
+        "Scikit-Learn"
+      ],
+      "links": [
+        {
+          "label": "Kaggle notebook",
+          "url": "https://www.kaggle.com/code/deniskombe5gmailcom/titanic-dataset-eda",
+          "type": "notebook"
+        }
+      ],
+      "images": [
+        {
+          "file": "titanic-eda.svg",
+          "alt": "Placeholder illustration of a histogram, a bar chart and a correlation heatmap",
+          "is_placeholder": true
+        }
+      ],
+      "downloads": []
+    },
+    {
+      "slug": "bert-sentence-similarity",
+      "title": "Sentence Similarity with BERT",
+      "category": "python-sql",
+      "summary": "An NLP notebook that uses a pre-trained BERT model (bert-base-uncased) to measure how similar two sentences are, using contextual embeddings and cosine similarity.",
+      "problem": "Measure how close in meaning two sentences are, beyond matching words.",
+      "status_label": null,
+      "public_note": "Completed as the Week 11 NLP assignment of the Cyber Shujaa Data and AI program (August 2025).",
+      "link_note": null,
+      "is_featured": false,
+      "sort_order": 140,
+      "publish_block_reason": null,
+      "features": [
+        "Tokenization and embedding extraction with Hugging Face Transformers",
+        "Sentence representation from the [CLS] token",
+        "Cosine similarity between BERT embeddings",
+        "Label prediction with a 0.7 similarity threshold",
+        "Evaluation of prediction accuracy"
+      ],
+      "technologies": [
+        "Python",
+        "BERT",
+        "Hugging Face",
+        "NLP"
+      ],
+      "links": [
+        {
+          "label": "Colab notebook",
+          "url": "https://colab.research.google.com/drive/1v6vtMjUiIwFScBQMJanYLYq5Fw-uoI6W?usp=sharing",
+          "type": "notebook"
+        }
+      ],
+      "images": [
+        {
+          "file": "bert-sentence-similarity.svg",
+          "alt": "Placeholder illustration of two sentences feeding a BERT model that outputs embeddings and a similarity score",
+          "is_placeholder": true
+        }
+      ],
+      "downloads": []
+    },
+    {
+      "slug": "kenya-hr-hub",
+      "title": "Kenya HR Hub",
+      "category": "dashboards",
+      "summary": "A look at Kenyan workforce demographics using Excel and Power BI.",
+      "problem": null,
+      "status_label": null,
+      "public_note": null,
+      "link_note": "Link coming soon",
+      "is_featured": false,
+      "sort_order": 150,
+      "publish_block_reason": "Confirm the HR dataset is synthetic or anonymised before publishing.",
+      "features": [],
+      "technologies": [
+        "Excel",
+        "Power BI"
+      ],
+      "links": [],
+      "images": [
+        {
+          "file": "kenya-hr-hub.svg",
+          "alt": "Placeholder illustration of a dashboard with KPI tiles, a bar chart and a donut chart",
+          "is_placeholder": true
+        }
+      ],
+      "downloads": []
+    },
+    {
+      "slug": "home-price-regression",
+      "title": "Home Price Regression",
+      "category": "python-sql",
+      "summary": "Predicting home prices with Linear Regression, including feature engineering on real estate data.",
+      "problem": "Estimate home prices from property features.",
+      "status_label": null,
+      "public_note": null,
+      "link_note": null,
+      "is_featured": false,
+      "sort_order": 160,
+      "publish_block_reason": null,
+      "features": [
+        "Feature engineering",
+        "Linear Regression model"
+      ],
+      "technologies": [
+        "Python",
+        "Scikit-Learn",
+        "Regression"
+      ],
+      "links": [
+        {
+          "label": "Colab notebook",
+          "url": "https://colab.research.google.com/drive/1WO2k4k5yrAU4J11VaZ-rGkizja4rrYmx?usp=sharing",
+          "type": "notebook"
+        }
+      ],
+      "images": [
+        {
+          "file": "home-price-regression.svg",
+          "alt": "Placeholder illustration of a scatter plot with a regression line",
+          "is_placeholder": true
+        }
+      ],
+      "downloads": []
+    },
+    {
+      "slug": "ml-classification-study",
+      "title": "ML Classification Study",
+      "category": "python-sql",
+      "summary": "A comparison of six classification algorithms with accuracy benchmarking.",
+      "problem": null,
+      "status_label": null,
+      "public_note": null,
+      "link_note": null,
+      "is_featured": false,
+      "sort_order": 170,
+      "publish_block_reason": null,
+      "features": [
+        "Six classification algorithms compared",
+        "Accuracy benchmarking"
+      ],
+      "technologies": [
+        "Python",
+        "Scikit-Learn",
+        "Machine Learning"
+      ],
+      "links": [
+        {
+          "label": "Colab notebook",
+          "url": "https://colab.research.google.com/drive/1mM0_QFxayHhLNOFlivzOscdtWFSarky4?usp=sharing",
+          "type": "notebook"
+        }
+      ],
+      "images": [
+        {
+          "file": "ml-classification-study.svg",
+          "alt": "Placeholder illustration of horizontal bars comparing model results",
+          "is_placeholder": true
+        }
+      ],
+      "downloads": []
+    },
+    {
+      "slug": "mlops-pipeline",
+      "title": "MLOps Pipeline",
+      "category": "python-sql",
+      "summary": "A housing regression pipeline with preprocessing, model selection and evaluation steps.",
+      "problem": null,
+      "status_label": null,
+      "public_note": null,
+      "link_note": null,
+      "is_featured": false,
+      "sort_order": 180,
+      "publish_block_reason": null,
+      "features": [
+        "Preprocessing step",
+        "Model selection",
+        "Model evaluation"
+      ],
+      "technologies": [
+        "Python",
+        "Pipelines",
+        "MLOps"
+      ],
+      "links": [
+        {
+          "label": "Colab notebook",
+          "url": "https://colab.research.google.com/drive/1mM0_QFxayHhLNOFlivzOscdtWFSarky4?usp=sharing",
+          "type": "notebook"
+        }
+      ],
+      "images": [
+        {
+          "file": "mlops-pipeline.svg",
+          "alt": "Placeholder diagram of a pipeline with data, preprocess, train and evaluate stages",
+          "is_placeholder": true
+        }
+      ],
+      "downloads": []
+    },
+    {
+      "slug": "digit-classification",
+      "title": "Handwritten Digit Classification",
+      "category": "python-sql",
+      "summary": "A neural network that recognises handwritten digits from the MNIST dataset, built with TensorFlow and Keras in Google Colab.",
+      "problem": "Automating handwritten digit recognition to demonstrate image classification with artificial intelligence.",
+      "status_label": null,
+      "public_note": null,
+      "link_note": "Link coming soon",
+      "is_featured": false,
+      "sort_order": 190,
+      "publish_block_reason": null,
+      "features": [
+        "Preprocessed the MNIST dataset",
+        "Developed and trained an Artificial Neural Network",
+        "Evaluated predictions with a confusion matrix and classification metrics",
+        "93.70% test accuracy",
+        "Saved the trained model for possible application or API deployment"
+      ],
+      "technologies": [
+        "Python",
+        "TensorFlow",
+        "Keras",
+        "Google Colab"
+      ],
+      "links": [],
+      "images": [
+        {
+          "file": "digit-classification.svg",
+          "alt": "Placeholder illustration of a neural network diagram next to a confusion matrix",
+          "is_placeholder": true
+        }
+      ],
+      "downloads": []
+    },
+    {
+      "slug": "web-scraper",
+      "title": "Web Scraper",
+      "category": "python-sql",
+      "summary": "A Python notebook that extracts structured web data using BeautifulSoup and Pandas.",
+      "problem": "Useful information on web pages is rarely available as structured data.",
+      "status_label": null,
+      "public_note": null,
+      "link_note": null,
+      "is_featured": false,
+      "sort_order": 200,
+      "publish_block_reason": null,
+      "features": [
+        "HTML parsing with BeautifulSoup",
+        "Structured output with Pandas"
+      ],
+      "technologies": [
+        "Python",
+        "BeautifulSoup",
+        "Pandas"
+      ],
+      "links": [
+        {
+          "label": "Colab notebook",
+          "url": "https://colab.research.google.com/drive/1TUai2mEbBYmzW4NjdvW05vQK-ZjZTBla?usp=sharing",
+          "type": "notebook"
+        }
+      ],
+      "images": [
+        {
+          "file": "web-scraper.svg",
+          "alt": "Placeholder illustration of a notebook with a code cell and a data table output",
+          "is_placeholder": true
+        }
+      ],
+      "downloads": []
+    }
+  ]
+}

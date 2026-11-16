@@ -36,9 +36,12 @@ Owner work that can run in parallel: review the 20 imported projects, write case
 - [x] Local tools verified (PHP 8.4.27, Composer, Node)
 - [x] Laravel 13.42.0 skeleton, Filament 5.11.3 admin, Spatie media, Pest, Scramble installed (dependency resolution verified, ADR-0009)
 - [x] Admin login works locally
-- [ ] Migrations, enums and models from DATABASE.md (written, awaiting local run)
-- [ ] Filament resources, 2FA and panel access restriction
-- [ ] Legacy import command (drafts)
+- [x] Migrations, enums and models from DATABASE.md (tests passing)
+- [x] Admin access allow-list and 2FA (verified in browser)
+- [x] Projects resource with images, publishing hold (uploads verified in browser)
+- [ ] Legacy import of projects as drafts (written, awaiting local run)
+- [ ] Import of services, skills, experience, education, certifications and settings
+- [ ] Other Filament resources (services, skills, experience, settings, enquiries)
 - [ ] CI with MySQL 8 (ADR-0010)
 
 ## Stage 4 task outline
