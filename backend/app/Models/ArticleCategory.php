@@ -12,6 +12,6 @@ class ArticleCategory extends Model
 
     public function articles(): HasMany
     {
-        return $this->hasMany(\App\Models\Article::class);
+        return $this->hasMany(\App\Models\Article::class, 'category_id');
     }
 }

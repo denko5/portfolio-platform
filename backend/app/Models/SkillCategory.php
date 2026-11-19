@@ -12,6 +12,6 @@ class SkillCategory extends Model
 
     public function skills(): HasMany
     {
-        return $this->hasMany(\App\Models\Skill::class)->orderBy('sort_order');
+        return $this->hasMany(\App\Models\Skill::class, 'category_id')->orderBy('sort_order');
     }
 }
