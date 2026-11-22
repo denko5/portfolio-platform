@@ -18,6 +18,8 @@ class TechnologyResource extends Resource
 {
     protected static ?string $model = Technology::class;
 
+    protected static ?int $navigationSort = 20;
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     public static function form(Schema $schema): Schema

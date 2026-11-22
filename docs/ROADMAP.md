@@ -40,8 +40,10 @@ Owner work that can run in parallel: review the 20 imported projects, write case
 - [x] Admin access allow-list and 2FA (verified in browser)
 - [x] Projects resource with images, publishing hold (uploads verified in browser)
 - [x] Legacy import of the 20 projects as drafts (verified locally, 31 tests passing)
-- [ ] Legacy import of services, skills, experience, education, certifications, social links and settings (written, awaiting local run)
-- [ ] Other Filament resources (services, skills, experience, settings, enquiries)
+- [x] Legacy import of services, skills, experience, education, certifications, social links and settings (verified locally)
+- [x] Filament pages for services, skills, experience, education, certifications, social links, technologies, categories and site settings (written, awaiting local run)
+- [ ] Contact enquiries resource and dashboard widgets
+- [ ] Public API endpoints (Stage 5)
 - [ ] CI with MySQL 8 (ADR-0010)
 
 ## Stage 4 task outline

@@ -6,7 +6,9 @@ use App\Enums\TechnologyType;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
+use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
+use Illuminate\Support\Str;
 
 class TechnologyForm
 {
@@ -15,19 +17,27 @@ class TechnologyForm
         return $schema
             ->components([
                 TextInput::make('name')
-                    ->required(),
+                    ->required()
+                    ->maxLength(60)
+                    ->unique(ignoreRecord: true)
+                    ->dehydrateStateUsing(fn (?string $state): string => trim((string) $state))
+                    ->live(onBlur: true)
+                    ->afterStateUpdated(function (Set $set, ?string $state, string $operation): void {
+                        if ($operation === 'create') {
+                            $set('slug', Str::slug((string) $state));
+                        }
+                    }),
                 TextInput::make('slug')
-                    ->required(),
+                    ->required()
+                    ->maxLength(60)
+                    ->alphaDash()
+                    ->unique(ignoreRecord: true),
                 Select::make('type')
                     ->options(TechnologyType::class)
-                    ->default('tool')
-                    ->required(),
-                Toggle::make('is_featured')
-                    ->required(),
-                TextInput::make('sort_order')
                     ->required()
-                    ->numeric()
-                    ->default(0),
+                    ->helperText('Language, tool, platform or concept (for example EDA).'),
+                Toggle::make('is_featured')->label('Featured in the scrolling banner'),
+                TextInput::make('sort_order')->numeric()->default(0)->required(),
             ]);
     }
 }

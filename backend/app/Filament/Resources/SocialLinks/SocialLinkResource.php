@@ -18,6 +18,8 @@ class SocialLinkResource extends Resource
 {
     protected static ?string $model = SocialLink::class;
 
+    protected static ?int $navigationSort = 80;
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     protected static ?string $recordTitleAttribute = 'label';

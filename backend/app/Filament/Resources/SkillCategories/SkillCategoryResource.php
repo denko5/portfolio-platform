@@ -18,6 +18,8 @@ class SkillCategoryResource extends Resource
 {
     protected static ?string $model = SkillCategory::class;
 
+    protected static ?int $navigationSort = 40;
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     protected static ?string $recordTitleAttribute = 'name';

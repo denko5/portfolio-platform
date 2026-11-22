@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Projects\Tables;
 
 use App\Enums\PublicationStatus;
+use App\Filament\Support\PublishingActions;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -65,6 +66,8 @@ class ProjectsTable
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
+                    PublishingActions::publish(),
+                    PublishingActions::unpublish(),
                     DeleteBulkAction::make(),
                     ForceDeleteBulkAction::make(),
                     RestoreBulkAction::make(),

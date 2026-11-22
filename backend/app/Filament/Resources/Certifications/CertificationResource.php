@@ -18,6 +18,8 @@ class CertificationResource extends Resource
 {
     protected static ?string $model = Certification::class;
 
+    protected static ?int $navigationSort = 70;
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     protected static ?string $recordTitleAttribute = 'title';

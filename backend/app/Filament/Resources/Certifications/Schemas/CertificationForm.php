@@ -14,23 +14,17 @@ class CertificationForm
     {
         return $schema
             ->components([
-                TextInput::make('title')
-                    ->required(),
-                TextInput::make('issuer')
-                    ->required(),
-                DatePicker::make('issued_on')
-                    ->required(),
-                TextInput::make('credential_url')
-                    ->url(),
-                TextInput::make('note'),
-                TextInput::make('sort_order')
-                    ->required()
-                    ->numeric()
-                    ->default(0),
+                TextInput::make('title')->required()->maxLength(180),
+                TextInput::make('issuer')->required()->maxLength(160),
+                DatePicker::make('issued_on')->required()->helperText('Shown as month and year.'),
+                TextInput::make('credential_url')->url()->maxLength(500)->helperText('Optional link to verify the certificate.'),
+                TextInput::make('note')->maxLength(160)->helperText('For example "Graduated with a Merit".')->columnSpanFull(),
                 Select::make('publication_status')
+                    ->label('Status')
                     ->options(PublicationStatus::class)
-                    ->default('draft')
+                    ->default(PublicationStatus::Draft->value)
                     ->required(),
+                TextInput::make('sort_order')->numeric()->default(0)->required(),
             ]);
     }
 }

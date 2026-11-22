@@ -18,6 +18,8 @@ class EducationResource extends Resource
 {
     protected static ?string $model = Education::class;
 
+    protected static ?int $navigationSort = 60;
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     protected static ?string $recordTitleAttribute = 'qualification';
