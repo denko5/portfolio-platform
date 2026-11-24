@@ -43,7 +43,9 @@ Owner work that can run in parallel: review the 20 imported projects, write case
 - [x] Legacy import of services, skills, experience, education, certifications, social links and settings (verified locally)
 - [x] Filament pages for services, skills, experience, education, certifications, social links, technologies, categories and site settings (written, awaiting local run)
 - [ ] Contact enquiries resource and dashboard widgets
-- [ ] Public API endpoints (Stage 5)
+- [x] Public read API endpoints (written, awaiting local run)
+- [ ] Contact submission endpoint and enquiries inbox
+- [ ] API documentation page (Scramble) reviewed
 - [ ] CI with MySQL 8 (ADR-0010)
 
 ## Stage 4 task outline

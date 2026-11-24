@@ -19,9 +19,11 @@ The OpenAPI document is generated from the code with a tool to be verified in St
 | 404 | Unknown or unpublished slug | `{ "message": "Not found." }` |
 | 422 | Validation failure | `{ "message": "...", "errors": { "field": ["..."] } }` |
 | 429 | Rate limit exceeded | `{ "message": "Too many requests." }` plus `Retry-After` header |
-| 500 | Unexpected error | `{ "message": "Server error." }` (no stack trace, no details) |
+| 500 | Unexpected error | `{ "message": "Server Error" }` in production (Laravel's standard message, no stack trace or details) |
 
 ## 2. Public read endpoints
+
+**Status: implemented** in `backend/routes/api.php` (Stage 5), covered by `tests/Feature/PublicApiTest.php`. Image and file URLs are same-origin paths such as `/storage/...`, never absolute URLs. The profile never exposes the private enquiry notification email, and exposes the Overcend block only when the owner has made it visible.
 
 | Method and path | Purpose |
 |---|---|
@@ -122,7 +124,7 @@ The build process reads the API over the internal loopback address and is exempt
 
 ## 6. Caching
 
-Public GET responses send `Cache-Control` and `ETag`. Because the public site is static, runtime API traffic is low, so application-level caching is only added if measurements justify it.
+Successful public GET responses send a 60 second `Cache-Control` and an `ETag` (a repeat request answers `304`). Error responses are never cached (`Cache-Control: no-store`), so a page that is published a moment after a 404 appears immediately. The `featured` filter accepts `true`, `false`, `1` or `0`. Because the public site is static, runtime API traffic is low, so application-level caching is only added if measurements justify it.
 
 ## 7. Tests (Stage 5)
 
