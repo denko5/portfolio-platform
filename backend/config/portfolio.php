@@ -17,4 +17,14 @@ return [
     */
     'require_admin_mfa' => (bool) env('ADMIN_REQUIRE_MFA', true),
 
+    /*
+    | Optional Cloudflare Turnstile spam check for the contact form. Off by default.
+    | When enabled, the form must send a valid cf-turnstile-response token, and a failed
+    | or unreachable check rejects the submission.
+    */
+    'turnstile' => [
+        'enabled' => (bool) env('TURNSTILE_ENABLED', false),
+        'secret' => env('TURNSTILE_SECRET'),
+    ],
+
 ];

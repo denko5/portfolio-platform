@@ -2,7 +2,9 @@
 
 namespace App\Enums;
 
-enum EnquiryType: string
+use Filament\Support\Contracts\HasLabel;
+
+enum EnquiryType: string implements HasLabel
 {
     case Employment = 'employment';
     case SoftwareDevelopment = 'software_development';
@@ -11,4 +13,17 @@ enum EnquiryType: string
     case Consulting = 'consulting';
     case Collaboration = 'collaboration';
     case General = 'general';
+
+    public function getLabel(): string
+    {
+        return match ($this) {
+            self::Employment => 'Employment',
+            self::SoftwareDevelopment => 'Software development',
+            self::DataAnalytics => 'Data analytics',
+            self::ItSupport => 'IT support',
+            self::Consulting => 'Consulting',
+            self::Collaboration => 'Collaboration',
+            self::General => 'General enquiry',
+        };
+    }
 }

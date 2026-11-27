@@ -88,7 +88,7 @@ The OpenAPI document is generated from the code with a tool to be verified in St
 | `enquiry_type` | required, one of the allowed values |
 | `subject` | required, 3 to 190 |
 | `message` | required, 10 to 5000 |
-| `budget_range` | optional, allow-listed values |
+| `budget_range` | optional, one of `not_sure`, `small`, `medium`, `large` (the website chooses the labels) |
 | `privacy_accepted` | required, must be true |
 | `website` | **honeypot**, must be empty |
 | `cf-turnstile-response` | required only when Turnstile is enabled in config |
@@ -103,6 +103,16 @@ Behaviour, in order:
 6. Return `201 { "data": { "reference": "01J..." }, "message": "Thanks, your message was received." }`.
 
 Logging records the reference and outcome, not the message body or the raw IP.
+
+### Implemented behaviour details
+
+- The visitor's email is lower-cased before validation. The subject must be a single line (no line breaks).
+- **Honeypot** (`website`): if filled, the response is a normal-looking `201` with a random reference, and nothing is stored or sent.
+- **Duplicates:** the same email sending the same message again within 24 hours returns the original reference and creates no second row or email.
+- **Rate limits:** only *accepted* submissions count against a visitor: 5 per hour per IP address and 3 per hour per email address, answered with `429 {"message":"Too many requests."}` and a `Retry-After` header. Invalid and duplicate attempts never count, so a visitor who mistypes the form is not locked out. A separate flood guard allows 60 raw attempts per hour per IP address.
+- **Turnstile:** optional, off by default (`TURNSTILE_ENABLED`, `TURNSTILE_SECRET`). When on, a missing, failed or unreachable check returns `422` on `cf-turnstile-response`.
+- The IP address is stored only as a keyed hash. The enquiry is saved before any email is attempted, so a mail problem never loses it or fails the visitor. If no notification email is configured, the enquiry is still stored and a warning (reference only) is logged.
+- There is no public endpoint that returns enquiries. They are visible only in the admin.
 
 ## 4. Internal endpoints (not public, not in the public docs)
 

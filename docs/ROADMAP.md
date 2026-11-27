@@ -44,7 +44,7 @@ Owner work that can run in parallel: review the 20 imported projects, write case
 - [x] Filament pages for services, skills, experience, education, certifications, social links, technologies, categories and site settings (written, awaiting local run)
 - [ ] Contact enquiries resource and dashboard widgets
 - [x] Public read API endpoints (written, awaiting local run)
-- [ ] Contact submission endpoint and enquiries inbox
+- [x] Contact submission endpoint, spam protection, queued notification and enquiries inbox (written, awaiting local run)
 - [ ] API documentation page (Scramble) reviewed
 - [ ] CI with MySQL 8 (ADR-0010)
 

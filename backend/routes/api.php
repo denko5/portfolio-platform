@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\ArticleController;
 use App\Http\Controllers\Api\CertificationController;
+use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Api\EducationController;
 use App\Http\Controllers\Api\ExperienceController;
 use App\Http\Controllers\Api\ProfileController;
@@ -17,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 | Only published content is ever returned. Successful responses carry an ETag and a short
 | Cache-Control; errors are never cached (see PublicApiCache).
 */
+// Contact form submission: flood guard here, stricter per-visitor limits in the controller. Never cached.
+Route::post('contact', ContactController::class)->middleware('throttle:contact-attempts');
+
 Route::middleware(['throttle:public-api', PublicApiCache::class])->group(function (): void {
     Route::get('profile', ProfileController::class);
     Route::get('projects', [ProjectController::class, 'index']);
